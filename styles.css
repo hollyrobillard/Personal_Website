@@ -1,0 +1,502 @@
+/* File: styles.css             */
+/* Author: Holly Robillard      */
+/* Course: IT3240 - Spring 2025 */
+/* Last Updated: May 7, 2025 */
+
+/* ------------------- */
+/* -- CSS Variables -- */
+/* ------------------- */
+
+:root {
+    /* Colors */
+    --primary-color: #333;
+    --accent-color: #e07a5f;
+    --background-color: #fff;
+    --light-gray: rgba(204, 204, 204, 0.5);
+    
+    /* Fonts */
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+/* ------------------- */
+/* -- Global Styles -- */
+/* ------------------- */
+
+/* Body Sections */
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Images */
+img {
+    border-radius: 3%;
+    border: 0.05rem solid black;
+}
+  
+/* Horizontal Rules */
+hr {
+    margin: 3rem 0;
+}
+
+/* Tables */
+th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.2rem 2rem 0.2rem 0rem;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Hidden h2 for Sections */
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* ------------------ */
+/* ------ Logo ------ */
+/* ------------------ */
+
+#logo {
+    height: 80px;
+    border: none;
+    position: static;
+}
+
+/* ------------------ */
+/* ----- Header ----- */
+/* ------------------ */
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#logo-nav {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    position: relative;
+    gap: 1rem;
+}
+  
+header h1 {
+    font-size: 2.5rem;
+}
+  
+/* ------------------------------ */
+/* - Navigation Menu and Footer - */
+/* ------------------------------ */
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+nav ul,
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 2rem;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+/* ------------------- */
+/* ---- Home Page ---- */
+/* ------------------- */
+
+/* Hero Section */
+#hero {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--light-gray);
+}
+
+#hero-article {
+    flex: 1;
+}
+
+#hero img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    flex: 1 1 250px;
+    object-fit: cover;
+}
+
+/* Call-to-Action Section */
+#call-to-action {
+    text-align: center;
+}
+
+#call-to-action ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+/* Self-Introduction Section */
+#self-introduction {
+    background-color: var(--light-gray);
+    padding: 1rem;
+}
+
+/* Photos Section */
+#photos {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#photos-images {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#photos img {
+    height: 400px;
+    margin: 1rem;
+}
+
+#wide-photo {
+    height: 600px;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 0%;
+}
+
+/* ----------------- */
+/* -- Resume Page -- */
+/* ----------------- */
+
+/* Skills Section */
+#resume-skills {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "skills skills"
+        "product-management technical"
+        "project-management business-analysis";
+    padding-bottom: 1rem;
+}
+
+#resume-skills h2 {
+    grid-area: skills;
+}
+
+#product-management {
+    grid-area: product-management;
+    padding-right: 1rem;
+    border-right: dashed var(--accent-color);
+    border-bottom: dashed var(--accent-color);
+}
+
+#project-management {
+    grid-area: project-management;
+    padding-right: 1rem;
+    border-right: dashed var(--accent-color);
+}
+
+#business-analysis {
+    grid-area: business-analysis;
+    padding-left: 1rem;
+}
+
+#technical {
+    grid-area: technical;
+    padding-left: 1rem;
+    border-bottom: dashed var(--accent-color);
+}
+
+/* Publications Section */
+#resume-publications ul {
+    list-style-type: none;
+}
+
+#organizations {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "org-1 org-2"
+}
+
+#pmi {
+    grid-area: org-1;
+    padding-right: 2rem;
+    border-right: dashed var(--accent-color);
+}
+
+#toastmasters {
+    grid-area: org-2;
+    padding-left: 2rem;
+    border-left: dashed var(--accent-color);
+}
+
+/* ------------------ */
+/* -- Gallery Page -- */
+/* ------------------ */
+
+/* Audio in the Gallery */
+audio {
+    border: var(--primary-color) solid 0.1rem;
+    background-color: var(--light-gray);
+    padding: 0.5rem;
+}
+
+audio:hover {
+    border: var(--accent-color) solid 0.1rem;
+}
+
+/* Photo Sections */
+#gallery-images {
+    text-align: center;
+} 
+
+.photo-section {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#gallery-images h2 {
+    text-align: left;
+}
+
+/* Images in the Gallery */
+figure {
+    padding: 1rem;
+    border: var(--primary-color) solid 0.1rem;
+}
+
+figure:hover {
+    border: var(--accent-color) solid 0.1rem;
+    box-shadow: 0.3rem -0.3rem var(--light-gray);
+}
+
+figcaption {
+    font-size: 0.8rem;
+}
+
+.thumbnail {
+    flex: 0 1 200px;
+    height: 200px;
+    max-width: 200px;
+    margin: 5px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+  
+.thumbnail-description {
+    padding: 0.4rem 0 0.2rem 0;
+    text-align: center;
+}
+
+/* Videos in the Gallery */
+.youtube-videos {
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    position: relative;
+}
+
+.youtube-videos iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video Sections */
+.video-section {
+    background-color: var(--light-gray);
+    text-align: center;
+    padding: 2rem 6rem;
+}
+
+/* ------------------- */
+/* ---- Blog Page ---- */
+/* ------------------- */
+
+/* Blog Page Introduction */
+#blog-introduction {
+    background-color: var(--light-gray);
+    padding: 1rem;
+}
+
+/* Blog Articles Layout */
+#learn,
+#train {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "title title"
+        "paragraph-1 paragraph-1"
+        "paragraph-2 image"
+        "paragraph-3 paragraph-3";
+}
+
+#learn h2 {
+    grid-area: title;
+}
+
+#learn-1,
+#train-1 {
+    grid-area: paragraph-1;
+    padding-right: 2rem;
+}
+
+#learn-2,
+#train-2 {
+    grid-area: paragraph-2;
+    margin: auto 2rem auto 0;
+}
+
+#learn-3,
+#train-3 {
+    grid-area: paragraph-3;
+}
+
+/* Blog Article Images Layout and Sizing */
+#learn img, 
+#train img {
+    grid-area: image;
+    max-width: 100%;
+    margin: auto 0;
+}
+
+/* -------------------- */
+/* --- Contact Page --- */
+/* -------------------- */
+
+/* Contact Page Introduction */
+#contact-introduction {
+    text-align: center;
+    padding: 0 5rem;
+}
+
+/* Newsletter Form */ /* New for Week 5 */
+#newsletter-form {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+#newsletter-form form {
+    max-width: 600px;
+    margin: auto;
+}
+
+#f-email {
+    width: 14rem;
+}
+
+#newsletter-form fieldset.subfieldset {
+    border: 1px dashed var(--primary-color);
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+
+#newsletter-form fieldset.subfieldset legend {
+    font-size: medium;
+    font-weight: normal;
+}
+
+#newsletter-form legend {
+    font-size: large;
+    font-weight: bold;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-family: var(--font-stack);
+    opacity: 0.6;
+    font-style: italic;
+}
+
+#f-newsletter {
+    font-size: medium;
+}
+
+#f-other {
+    width: 99%;
+    height: 7rem;
+}
+
+#submit {
+    font-size: medium;
+    padding: 0 1rem;
+    border: 0.1rem solid var(--primary-color);
+    border-radius: 3%;
+    margin-bottom: 1rem;
+}
+
+#submit:hover {
+    border: 0.1rem solid var(--accent-color);
+    background-color: var(--light-gray);
+}
+
+#output {
+    text-align: center;
+    background-color: var(--light-gray);
+    opacity: 0.8;
+    width: 50%;
+    margin: auto;
+}
+
+/* Email Mailto */
+#contact-email {
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+}

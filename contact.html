@@ -1,0 +1,166 @@
+<!-- 
+    File: contact.html
+    Author: Holly Robillard
+    Course: IT3240 - Spring 2025
+    Last Updated: May 7, 2025
+
+    Purpose: 
+    The Contact page provides visitors with clear and simple ways to get in touch with me 
+    for professional inquiries, networking opportunities, or personal connections. 
+    It serves as a direct channel for communication and reflects my openness to collaboration 
+    and meaningful conversation.
+
+    Structure: 
+    - Header with logo and navigation menu
+    - Introduction paragraph inviting users to reach out
+    - Newsletter form with fields to personalize information for the user.
+    - Mailto link for users who prefer to email directly
+    - Footer with copyright and social links
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Holly Robillard</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <!-- Page Content -->
+    <body>
+        <!-- Page Header -->
+        <header>
+            <div id="logo-nav">
+                <!-- Logo -->
+                <img src="logo.png" alt="Logo for Holly Robillard website" id="logo">
+                <!-- Navigation Menu -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Contact</h1>
+        </header>
+        
+        <!-- Main Page Content -->
+        <main id="contact">
+
+            <!-- Contact Introduction: Short Paragraph Introducing the Page -->
+            <section id="contact-introduction">
+                <h2>
+                    I'd love to hear from you!
+                </h2>
+                <p>
+                    Whether you're reaching out with a question, an opportunity to collaborate, or just want to connect, feel free to send me a message using the form below. You can also email me directly - I'm always happy to start a conversation.
+                </p>                  
+            </section>
+
+            <!-- Newsletter Form: Form to Collect Information for Personalized Newsletter --> <!-- New for Week 5 -->
+            <section id="newsletter-form">
+                <h2 class="hidden">Newsletter Form</h2>
+                <form id="webForm" action="#"> 
+                    <fieldset>
+                        <legend>Newsletter Request Form</legend>
+
+                        <!-- Name Field -->
+                        <p>
+                            <label for="f-name">Name: </label>
+                            <input type="text" name="name" id="f-name" placeholder="Jane Doe" required>
+                        </p>
+
+                        <!-- Email Field -->
+                        <p>
+                            <label for="f-email">Email: </label>
+                            <input type="email" name="email" id="f-email" placeholder="jane.doe@example.com" required>
+                        </p>
+
+                        <!-- Type of Newsletter Selection Field -->
+                        <p>
+                            <label for="f-newsletter">Choose Type of Newsletter: </label>
+                            <select name="newsletter" id="f-newsletter" required>
+                                <option value="" disabled selected>Make a Selection</option>
+                                <option value="Professional">Professional</option>
+                                <option value="Personal Learnings">Personal Learnings</option>
+                                <option value="Personal Recommendations">Personal Recommendations</option>
+                            </select>
+                        </p>
+
+                        <!-- Receipt Days Selection Field -->
+                        <fieldset class="subfieldset">
+                            <legend>Preferred Receipt Days</legend>
+                          
+                            <input type="checkbox" id="checkbox1" name="days[]" value="Sun">
+                            <label for="checkbox1"> Sunday</label><br>
+                          
+                            <input type="checkbox" id="checkbox2" name="days[]" value="Mon">
+                            <label for="checkbox2"> Monday</label><br>
+                          
+                            <input type="checkbox" id="checkbox3" name="days[]" value="Tues">
+                            <label for="checkbox3"> Tuesday</label><br>
+                          
+                            <input type="checkbox" id="checkbox4" name="days[]" value="Wed">
+                            <label for="checkbox4"> Wednesday</label><br>
+                          
+                            <input type="checkbox" id="checkbox5" name="days[]" value="Thurs">
+                            <label for="checkbox5"> Thursday</label><br>
+                          
+                            <input type="checkbox" id="checkbox6" name="days[]" value="Fri">
+                            <label for="checkbox6"> Friday</label><br>
+                          
+                            <input type="checkbox" id="checkbox7" name="days[]" value="Sat">
+                            <label for="checkbox7"> Saturday</label><br>
+                        </fieldset>   
+                        
+                        <!-- Receipt Time Selection Field -->
+                        <fieldset class="subfieldset">
+                            <legend>Preferred Receipt Time</legend>
+
+                            <input type="radio" id="radio1" name="receipt-time" value="Morning">
+                            <label for="radio1"> Morning</label><br>
+
+                            <input type="radio" id="radio2" name="receipt-time" value="Mid-Day">
+                            <label for="radio2"> Mid-Day</label><br>
+
+                            <input type="radio" id="radio3" name="receipt-time" value="Evening">
+                            <label for="radio3"> Evening</label><br>
+                        </fieldset>
+
+                        <!-- Other Information Field -->
+                        <p>
+                            <label for="f-other">What Else Should I Know?</label><br>
+                            <textarea name="other" id="f-other" placeholder="Please share any topics of interest or preferences"></textarea>                      
+                        </p>
+
+                        <!-- Button to Submit Form -->
+                        <input type="submit" id="submit">
+                    </fieldset>
+                </form>
+            </section>
+
+            <div id="output"></div>
+
+            <!-- Contact Email: Mailto Link to Send a Direct Email -->
+            <section id="contact-email">
+                <h3>Prefer to Contact Me Directly?</h3>
+                <!-- Mailto Link -->
+                 <a href="mailto:h.ann.robillard@gmail.com?subject=Looking%20to%20Connect&body=Hi%20Holly,%20I%20found%20your%20website%20and%20wanted%20to%20reach%20out...">Send an Email</a>
+            </section>
+        </main>
+
+        <!-- Page Footer: Copyright and Social Media -->
+        <footer>
+            <p>&copy; 2025 Holly Robillard. All rights reserved.</p>
+            <!-- Social Media External Links -->
+            <ul>
+                <li><a href="https://linkedin.com/in/hollyrobillard">LinkedIn</a></li>
+                <li><a href="https://github.com/hollyrobillard">GitHub</a></li>
+            </ul>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
